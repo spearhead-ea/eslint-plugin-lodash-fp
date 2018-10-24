@@ -95,7 +95,7 @@ module.exports = function (imports) {
   });
 
   function isMethodCall(node) {
-    return isCallExpression(node) && isMethod(node.callee);
+    return isCallExpression(node) && isAnyMethod(node.callee);
   }
 
   const isMethodCallOf = _.curry((methods, node) => {
